@@ -1,7 +1,6 @@
 # Von Zeilen zu Regalen: NFDH gegen FFDH – Streamlit-Demo
 
-<!-- TODO nach dem Deploy: direkt hierher den Live-Link setzen (Leerzeile davor und danach):
-**[→ Demo live ausprobieren](https://sebastianhanisch-regalverfahren-demo.streamlit.app/)** -->
+**[→ Demo live ausprobieren](https://sebastianhanisch-regalverfahren-demo.streamlit.app/)**
 
 Stück 7 der Konzepte-Reihe **„Packen: Reihenfolge und Platzierungsregel“** für die Website „Sebastian Hanisch – Operations Research und Machine Learning“ (ein Verfahren mit wachsendem Beispiel: eine Packung entsteht aus einer Reihenfolge der Teile und einer Regel, wohin das nächste kommt). Die Demo geht von Zahlen (Stücke 1 bis 4 und 14) zu **Rechtecken, die nicht überlappen dürfen**, und nimmt den einfachsten Dekodierer dafür: **Regale**. Sie fragt, wie viel an der Regel hängt (in welches Regal kommt das nächste Rechteck) und wie viel am Sortierschlüssel, und wie weit ein Regalplan vom Optimum entfernt ist. Die Fall-Demos zu Zuschnitt und Paletten zeigen die Anwendung samt Kostenmodell; diese Demo erklärt den Mechanismus davor.
 
