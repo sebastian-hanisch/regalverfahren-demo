@@ -6,7 +6,7 @@ Stück 7 der Konzepte-Reihe **„Packen: Reihenfolge und Platzierungsregel“** 
 
 ## Warum dieses Problem
 
-Bei einer Größe sortiert man „das größte zuerst“ und die Regel, wohin ein Teil kommt, ändert fast nichts. Bei Rechtecken in Regalen ist das anders: Die Regel zählt stark, und der Schlüssel „größte Fläche zuerst“ ist nicht der richtige, die Höhe ist es. Die Demo zeigt an zwölf Rechtecken, dass derselbe Satz Rechtecke je nach Reihenfolge und Regel 6 oder 3 Behälter braucht, und misst dasselbe an je 100 Zufallsinstanzen in 16 Zellen.
+Bei einer Größe sortiert man „das größte zuerst“, und First Fit gegen Best Fit ändert fast nichts (Next Fit sehr wohl). Bei Rechtecken in Regalen gilt das auch, aber der Schlüssel ist ein anderer: nicht die Fläche, sondern die Höhe. Die Demo zeigt an zwölf Rechtecken, dass derselbe Satz Rechtecke je nach Reihenfolge und Regel 6 oder 3 Behälter braucht, und misst dasselbe an je 100 Zufallsinstanzen in 16 Zellen.
 
 ## Modell
 
@@ -28,7 +28,7 @@ Alle Zahlen sind Messungen an den Instanzen dieser Demo (feste Seeds), nachgerec
 | Beispiel 2 (zwölf andere Rechtecke, Schranke 2, Optimum 3) | Next / First Fit: in Lieferreihenfolge **4 / 4**, nach der Höhe **4 / 3**, nach der Fläche **5 / 4**; die Schranke liegt unter dem Optimum |
 | Ist First Fit besser als Next Fit? | Mit dem Schlüssel Höhe in allen 16 Zellen: in **1600** Instanzen nie schlechter. Mit den anderen drei Schlüsseln gibt es **7** Ausnahmen in 4800 Instanzen (Messung, kein Beweis) |
 | Welcher Schlüssel ist am besten? | **Höhe** in allen **16** Zellen und bei jeder der drei Regeln (auf zwei Stellen gerundet verglichen) |
-| Hilft „größte Fläche zuerst“? | Mit First Fit ja, aber weniger als die Höhe. Mit Next Fit ist Sortieren nach der Fläche in **6 von 16** Zellen schlechter als gar nicht zu sortieren (mittlere Rechtecke bei n = 20 und 80, breit gestreute bei allen vier Zahlen) |
+| Hilft „größte Fläche zuerst“? | Mit First Fit ja, aber weniger als die Höhe. Mit Next Fit ist Sortieren nach der Fläche im Mittel in **6 von 16** Zellen schlechter als gar nicht zu sortieren (mittlere Rechtecke bei n = 20 und 80, breit gestreute bei allen vier Zahlen), deutlich aber nur bei mittleren Rechtecken mit n = 80 und breit gestreuten mit n = 20, 40 und 80; bei mittleren mit n = 20 und breit gestreuten mit n = 12 ist der Unterschied klein |
 | Zählt die Regel oder der Schlüssel mehr? | Beides: In **8** Zellen ist der Unterschied zwischen den Regeln (bei gleichem Schlüssel) größer als der zwischen den Schlüsseln (bei gleicher Regel), in den anderen **8** umgekehrt. Die Regeln unterscheiden sich um **0,38** bis **14,28** Behälter, die Schlüssel um **0,77** bis **11,37** |
 | Best Fit gegen First Fit | Mit dem Schlüssel Höhe unterscheiden sie sich in jeder Zelle um höchstens **0,30** Behälter |
 | Wie nah am Optimum? | First Fit nach Höhe trifft das Optimum bei 12 Rechtecken in 67 bis 80 % der entschiedenen Instanzen, bei 20 Rechtecken in 49 bis 96 % |
@@ -53,7 +53,7 @@ Alle Zahlen sind Messungen an den Instanzen dieser Demo (feste Seeds), nachgerec
 - Alle Aussagen gelten für Rechtecke ohne Drehung, vier Verteilungen mit festen Bereichen, vier Rechteckzahlen und eine Behältergröße. Andere Verteilungen, Drehung und Praxisdaten sind nicht gemessen.
 - Das Optimum gilt über **alle** Packungen, nicht nur über Regalpläne; ein Teil des Abstands „Regalplan minus Optimum“ liegt am Regal als Dekodierer. Freie Platzierung ohne Regale (Skyline, MaxRects) ist nicht Gegenstand dieses Stücks.
 - Das Optimum bei 20 Rechtecken kommt aus CP-SAT mit Zeitlimit; die nicht entschiedenen Instanzen sind die schweren und fehlen im Mittel. Bei mittleren Rechtecken sind 27 von 100 offen, der Mittelwert dort ist deshalb nach unten verzerrt, und die Zahl hängt von der Rechenzeit ab.
-- Bei 40 und 80 Rechtecken fehlt das Optimum; die Schranke ist in 2D locker (schon bei 12 mittleren Rechtecken liegt das Optimum in 33 von 100 Instanzen darüber), also ist dort nur der Vergleich der Kombinationen belastbar, nicht der Abstand zur Schranke.
+- Bei 40 und 80 Rechtecken fehlt das Optimum; die Schranke ist in 2D locker (schon bei 12 mittleren Rechtecken liegt das Optimum in 33 von 100 Instanzen darüber), also ist dort nur der Vergleich der Kombinationen belastbar, und nur für Unterschiede deutlich über der Streuung der Mittel, nicht der Abstand zur Schranke.
 - Die Literaturhinweise (Coffman u. a. 1980 zu Regalverfahren beim Streifenpacken) stammen aus Suchtreffern, das Original wurde nicht gelesen; es wird keine Zahl und keine Gütegarantie daraus übernommen, und das Streifenproblem ist nicht dasselbe wie die Behälter dieser Demo.
 - Das Raster sagt nichts über Rechtecke, die einzeln nacheinander ohne Kenntnis der späteren eintreffen (Online-Packen, Konzepte-Reihe Online-Algorithmen).
 

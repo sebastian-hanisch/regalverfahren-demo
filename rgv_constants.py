@@ -60,7 +60,7 @@ PRESET_HELP = {
     "Beispiel 1, Lieferung, nur das letzte Regal": "Zwölf Rechtecke in der Reihenfolge, in der sie ankommen; jedes kommt in das zuletzt geöffnete Regal oder, wenn es dort nicht passt, in ein neues. Das sind sechs Behälter.",
     "Beispiel 1, nach Höhe, erstes passendes Regal": "Dieselben zwölf Rechtecke, nach der Höhe sortiert und in das erste Regal gesetzt, in dem sie passen. Das sind drei Behälter, so viele wie das Optimum.",
     "Beispiel 2, nach Fläche, erstes passendes Regal": "Ein zweites Beispiel, nach der Fläche sortiert (wie „das größte zuerst“ bei einer Größe). Hier ist die Höhe die bessere Wahl.",
-    "Mittlere Rechtecke, nach Höhe, nur das letzte Regal": "Eine Zufallsinstanz mit 20 mittleren Rechtecken: Auch sortiert nach der Höhe braucht die Regel „nur das letzte Regal“ deutlich mehr Behälter als „erstes passendes Regal“.",
+    "Mittlere Rechtecke, nach Höhe, nur das letzte Regal": "Eine Zufallsinstanz mit 20 mittleren Rechtecken: Auch sortiert nach der Höhe braucht „nur das letzte Regal“ hier einen Behälter mehr als „erstes passendes Regal“ (im Mittel dieser Zelle 1,6).",
 }
 
 # Text des Expanders „Annahmen, Grenzen und bekannte Probleme“; derselbe Wortlaut steht in der README (tests/test_claims.py vergleicht beide).
